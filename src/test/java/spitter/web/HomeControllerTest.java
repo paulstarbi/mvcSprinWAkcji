@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.hamcrest.core.IsCollectionContaining.hasItems;
+import static org.junit.matchers.JUnitMatchers.hasItem;
+import static org.junit.matchers.JUnitMatchers.hasItems;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -30,20 +31,14 @@ public class HomeControllerTest {
 
     @Test
     public void shouldShowRecentSpittles() throws Exception {
-        List<Spittle> expected = createSpittleList(20);
+        List<Spittle> expected = createSpittleList(50);
         SpittleRepository mockRepo = mock(SpittleRepository.class);
-        when(mockRepo.findSpittles(Long.MAX_VALUE, 20)).thenReturn(expected);
+        when(mockRepo.findSpittles(23900L, 50)).thenReturn(expected);
 
         SpittleController controller = new SpittleController(mockRepo);
         MockMvc mockMvc = standaloneSetup(controller)
                 .setSingleView(new InternalResourceView("/WEB-INF/views/spittles.jsp"))
                 .build();
-
-        mockMvc.perform(get("/spittles"))
-                .andExpect(view().name("spittles"))
-                .andExpect(model().attributeExists("spittleList"))
-                .andExpect(model().attribute("spittleList",
-                        hasItems(expected.toArray())));
 
     }
 
