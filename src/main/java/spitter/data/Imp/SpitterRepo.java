@@ -15,8 +15,19 @@ public class SpitterRepo implements SpitterRepository {
 
 
     @Override
-    public void save(Spittr spitter) {
+    public Spittr save(Spittr spitter) {
         users.add(spitter);
+        return spitter;
+    }
+
+    @Override
+    public Spittr findByName(String username) {
+        final Spittr[] result = new Spittr[1];
+        users.forEach(user -> {
+            if(user.getUserName().equalsIgnoreCase(username))
+                result[0] = user;
+        });
+        return result[0];
     }
 
 }

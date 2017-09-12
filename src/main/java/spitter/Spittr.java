@@ -1,5 +1,8 @@
 package spitter;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Spittr {
 
     private String firstName;

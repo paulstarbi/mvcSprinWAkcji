@@ -14,7 +14,7 @@
       Imię: <input type="text" name="firstName" /><br/>
       Nazwisko: <input type="text" name="lastName" /><br/>
       Adres e-mail: <input type="email" name="email" /><br/>
-      Nazwa użytkownika: <input type="text" name="username" /><br/>
+      Nazwa użytkownika: <input type="text" name="userName" /><br/>
       Hasło: <input type="password" name="password" /><br/>
       <input type="submit" value="Zarejestruj" />
     </form>
