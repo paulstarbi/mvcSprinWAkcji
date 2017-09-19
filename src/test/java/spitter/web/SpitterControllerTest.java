@@ -2,15 +2,13 @@ package spitter.web;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
-import spitter.Spittr;
+import spitter.model.Spitter;
 import spitter.data.SpitterRepository;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 public class SpitterControllerTest {
@@ -30,8 +28,8 @@ public class SpitterControllerTest {
         SpitterRepository mockRepository =
                 mock(SpitterRepository.class);
 
-        Spittr unsaved = new Spittr("jbauer", "24hours", "Jack", "Bauer");
-        Spittr saved = new Spittr("jbauer", "24hours", "Jack", "Bauer");
+        Spitter unsaved = new Spitter("jbauer", "24hours", "Jack", "Bauer");
+        Spitter saved = new Spitter("jbauer", "24hours", "Jack", "Bauer");
 
         when(mockRepository.save(unsaved)).thenReturn(saved);
 

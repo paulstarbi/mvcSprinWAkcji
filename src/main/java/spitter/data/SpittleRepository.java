@@ -1,6 +1,6 @@
 package spitter.data;
 
-import spitter.Spittle;
+import spitter.model.Spittle;
 
 import java.util.List;
 

@@ -2,9 +2,7 @@ package spitter.web;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
-import spitter.Spittle;
-import spitter.Spittr;
-import spitter.data.SpitterRepository;
+import spitter.model.Spittle;
 import spitter.data.SpittleRepository;
 
 import java.util.Date;
@@ -13,7 +11,6 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 

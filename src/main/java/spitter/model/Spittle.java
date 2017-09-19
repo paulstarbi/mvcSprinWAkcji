@@ -1,4 +1,4 @@
-package spitter;
+package spitter.model;
 
 import java.util.Date;
 import org.apache.commons.lang3.builder.EqualsBuilder;

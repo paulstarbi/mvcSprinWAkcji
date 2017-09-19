@@ -2,6 +2,15 @@ body {
 	font-family: sans-serif;
 }
 
+
+.error {
+	color: red;
+}
+
+div.errors {
+	background-color:chartreuse;
+	color: red;
+}
 .spittleList h1 {
 	font-size: 16pt;
 }

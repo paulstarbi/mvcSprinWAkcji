@@ -7,8 +7,8 @@
   </head>
   <body>
     <h1>Twój profil</h1>
-    <c:out value="${spitter.username}" /><br/>
+    <c:out value="${spitter.userName}" /><br/>
     <c:out value="${spitter.firstName}" /> <c:out value="${spitter.lastName}" /><br/>
-    <c:out value="${spitter.email}" />
+    <c:out value="${spitter.lastName}" />
   </body>
 </html>

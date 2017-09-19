@@ -1,9 +1,9 @@
 package spitter.data;
 
-import spitter.Spittr;
+import spitter.model.Spitter;
 
 public interface SpitterRepository {
-    Spittr save(Spittr spitter);
+    Spitter save(Spitter spitter);
 
-    Spittr findByName(String username);
+    Spitter findByName(String username);
 }

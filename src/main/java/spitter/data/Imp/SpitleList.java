@@ -1,7 +1,7 @@
 package spitter.data.Imp;
 
 import org.springframework.stereotype.Component;
-import spitter.Spittle;
+import spitter.model.Spittle;
 import spitter.data.SpittleRepository;
 
 import java.util.ArrayList;
