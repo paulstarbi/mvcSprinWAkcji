@@ -13,19 +13,19 @@ public class Spitter {
     private long id;
 
     @NotBlank
-    @Size(min =5, max = 25)
+    @Size(min =5, max = 25, message = "{firstname.size}")
     private String firstName;
 
     @NotBlank
-    @Size(min =5, max = 25)
+    @Size(min =5, max = 25, message = "{lastname.size}")
     private String lastName;
 
     @NotBlank
-    @Size(min =5, max = 25)
+    @Size(min =5, max = 25, message = "{username.size}")
     private String userName;
 
     @NotBlank
-    @Size(min =5, max = 25)
+    @Size(min =5, max = 25, message = "{password.size}")
     private String password;
     private String email;
 

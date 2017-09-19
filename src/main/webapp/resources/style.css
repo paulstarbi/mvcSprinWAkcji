@@ -2,7 +2,6 @@ body {
 	font-family: sans-serif;
 }
 
-
 .error {
 	color: red;
 }
@@ -40,3 +39,7 @@ div.errors {
 .spittleForm h1 {
 	font-size: 16pt;
 }
+
+label.error {color: red;}
+
+input.error {color: red;}
